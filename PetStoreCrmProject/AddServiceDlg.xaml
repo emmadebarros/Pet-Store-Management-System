@@ -1,0 +1,65 @@
+﻿<Window x:Class="PetStoreCrmProject.AddServiceDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetStoreCrmProject"
+        mc:Ignorable="d"
+        Title="AddServiceDlg" Height="548.781" Width="382.926"  WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43*" />
+            <RowDefinition Height="320*" />
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Animal ID:" Background="#34C1D6" HorizontalAlignment="Left" Margin="15,16,0,0" HorizontalContentAlignment="Left" Foreground="White" Padding="8,4,8,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="107"/>
+        <Label Content="Employee ID:" Background="#34C1D6" HorizontalAlignment="Left" Foreground="White" Padding="8,4,8,0" Margin="16,103,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="106"/>
+        <Label Content="Service Type:" Background="#34C1D6" Foreground="White" Padding="8,4,8,0" HorizontalAlignment="Left" Margin="16,190,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="106"/>
+        <Label Content="Service Date:" Background="#34C1D6" Foreground="White" Padding="8,4,8,0" HorizontalAlignment="Left" Margin="16,233,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="106"/>
+        <Label Content="Description:"  Background="#34C1D6" Foreground="White" Padding="8,4,8,0" HorizontalAlignment="Left" Margin="16,280,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="106"/>
+        <Label Content="Animal Name:"  Background="#34C1D6" Foreground="White" Padding="8,4,8,0" HorizontalAlignment="Left" Margin="16,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="106" Height="25"/>
+        <Label x:Name="lblServiceAnimalName" Content="" HorizontalAlignment="Left" Margin="127,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="226" Height="24"/>
+        <Label Content="Employee Name:"  Background="#34C1D6" Foreground="White" Padding="8,4,8,0" HorizontalAlignment="Left" Margin="16,149,0,0" Grid.Row="1" VerticalAlignment="Top" Width="106" Height="24"/>
+        <Label x:Name="lblServiceEmployeeName"  Content="" HorizontalAlignment="Left" Margin="127,149,0,0" Grid.Row="1" VerticalAlignment="Top" Width="215" Height="24"/>
+        <TextBox x:Name="tbServiceDescription" HorizontalAlignment="Left" Height="77" Margin="127,280,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Text here..." VerticalAlignment="Top" Width="226" SpellCheck.IsEnabled="True" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" GotFocus="tbServiceDescription_GotFocus" LostFocus="tbServiceDescription_LostFocus"/>
+        <DatePicker x:Name="calServiceDate" HorizontalAlignment="Left" Margin="127,232,0,0" Grid.Row="1" VerticalAlignment="Top" Width="226" Height="25"/>
+        <ComboBox x:Name="ComboServiceListing" HorizontalAlignment="Left" Margin="127,190,0,0" Grid.Row="1" VerticalAlignment="Top" Width="226" Height="25"/>
+        <ComboBox Name="comboServiceAnimalID"  HorizontalAlignment="Left" Margin="127,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="226" SelectionChanged="comboServiceAnimalID_SelectionChanged"/>
+        <ComboBox Name="comboServiceEmployeeID"  HorizontalAlignment="Left" Margin="127,102,0,0" Grid.Row="1" VerticalAlignment="Top" Width="226" SelectionChanged="comboServiceEmployeeID_SelectionChanged"/>
+        <Button Content="Add a service" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top" Width="230" Click="AddService_Button">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E6DA0" Offset="0"/>
+                    <GradientStop Color="#34C1D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Name="lblServiceResult" Content="" HorizontalAlignment="Left" Margin="140,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="277,5,0,0" Grid.Row="3" VerticalAlignment="Top" Width="76" Click="Close_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E6DA0" Offset="0"/>
+                    <GradientStop Color="#34C1D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Done" HorizontalAlignment="Left" Margin="277,8,0,0" VerticalAlignment="Top" Width="76" Click="BtnServiceDone" RenderTransformOrigin="0.347,-1.094">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E6DA0" Offset="0"/>
+                    <GradientStop Color="#34C1D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="103" BorderBrush="{x:Null}" Grid.RowSpan="2" >
+            <Button.Background>
+                <ImageBrush ImageSource="Images/logo_blue-02.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Add Service" FontSize="28" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="#FF2E6DA0" HorizontalAlignment="Left" Margin="95,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.157,-0.382"/>
+        <!--<TextBox x:Name="tbServiceAnimalID" HorizontalAlignment="Left" Height="23" Margin="127,17,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Text here..." VerticalAlignment="Top" Width="226" SpellCheck.IsEnabled="True" GotFocus="tbServiceAnimalID_GotFocus" LostFocus="tbServiceAnimalID_LostFocus"/>
+        <TextBox x:Name="tbServiceEmployeeID" HorizontalAlignment="Left" Height="23" Margin="127,103,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Text here..." VerticalAlignment="Top" Width="226" SpellCheck.IsEnabled="True" GotFocus="tbServiceEmployeeID_GotFocus" LostFocus="tbServiceEmployeeID_LostFocus"/>-->
+    </Grid>
+</Window>

@@ -1,0 +1,133 @@
+﻿<Window x:Class="PetStoreCrmProject.StaffWizardDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="StaffWizardDlg" Height="450" Width="800" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" MouseDown="Window_MouseDown">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush  ImageSource="Images/dogLineArt.jpg" Opacity="0.4"/>
+        </Grid.Background>
+        <!-- set it to false after for verif before closing -->
+        <xctk:Wizard Name="wiz" FinishButtonClosesWindow="False" IsEnabled="True" Finish="FinishButton_Clicked">
+            <xctk:WizardPage x:Name="IntroPage" 
+                                   Title="Add Employee - PetStore Crm"
+                                   Description="This Wizard will walk you through adding an employee in the system." Opacity="0.7"/>
+            <xctk:WizardPage x:Name="Page1" PageType="Interior"
+                                   Title="Page 1"
+                                   Description="This is the first page in the process."
+                                   NextPage="{Binding ElementName=Page2}"
+                                   PreviousPage="{Binding ElementName=IntroPage}" Opacity="0.7" CanSelectNextPage="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="4*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="First Name:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10"/>
+                    <TextBox Name="tbEmpFirst" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0"/>
+                    <Label Content="Middle Name:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="1"/>
+                    <TextBox Name="tbEmpMiddle" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Text="optional" GotFocus="tbEmpMiddle_GotFocus" LostFocus="tbEmpMiddle_LostFocus" Opacity="0.6"/>
+                    <Label Content="Last Name:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="2"/>
+                    <TextBox Name="tbEmpL" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" TextChanged="tbEmpLast_TextChanged"/>
+                </Grid>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page2" PageType="Interior"
+                                   Title="Page 2"
+                                   Description="This is the second page in the process" Opacity="0.7" CanSelectNextPage="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Phone #1:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10"/>
+                    <TextBox Name="tbPP" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0"/>
+                    <Label Content="Phone #2:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="1"/>
+                    <TextBox Name="tbSP" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" Text="optional" GotFocus="tbSP_GotFocus" LostFocus="tbSP_LostFocus" Opacity="0.6"/>
+                    <Label Content="Email:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="2"/>
+                    <TextBox Name="tbEmail" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" TextChanged="tbEmail_TextChanged"/>
+                </Grid>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page3" PageType="Interior"
+                                   Title="Page 3"
+                                   Description="This is the third page in the process" Opacity="0.7">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Position:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10"/>
+                    <ComboBox x:Name="comboPosition" HorizontalAlignment="Left" Height="29" Margin="100,25,0,0" Width="240"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="0"/>
+                    <Label Content="SIN:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="1"/>
+                    <TextBox Name="tbSin" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+                    <Label Content="Start Date:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="2"/>
+                    <DatePicker Name="dpSD" HorizontalAlignment="Left" Height="32" Margin="100,25,0,0"  Width="290"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="2"/>
+                    <Label Content="City:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="3"/>
+                    <TextBox Name="tbCity" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3"/>
+                </Grid>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page4" PageType="Interior"
+                                   Title="Page 4"
+                                   Description="This is the fourth page in the process" Opacity="0.7">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Address:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10"/>
+                    <TextBox Name="tbAddress" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0"/>
+                    <Label Content="Postal Code:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="1"/>
+                    <TextBox Name="tbPostalCode" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+                    <Label Content="Province:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="3"/>
+                    <ComboBox Name="comboProvince" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3"/>
+                    <Label Content="Country:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="2"/>
+                    <TextBox Name="tbCountry" IsReadOnly="True" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" Text="Canada"/>
+                </Grid>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page5" PageType="Interior"
+                                   Title="Page 5"
+                                   Description="This is the last page in the process" Opacity="0.7" CanFinish="True">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="CRM Password:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10"/>
+                    <PasswordBox Name="pwPassword" HorizontalAlignment="Left" Height="35" Margin="100,25,0,0"  Width="290" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0"/>
+                    <Label Content="Note:" Background="#34C1D6" HorizontalAlignment="Left" Margin="20,20,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Padding="10" Grid.Column="0" Grid.Row="1"/>
+                    <TextBox Name="tbNote" HorizontalAlignment="Left" Grid.RowSpan="2" Height="100" Margin="100,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290"  SpellCheck.IsEnabled="True"  AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Grid.Row="1" Grid.Column="1" BorderThickness="1"/>
+                </Grid>
+            </xctk:WizardPage>
+        </xctk:Wizard>
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetStoreCrmProject"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PetStoreCrmProject.EditDeleteServiceDlg"
+        mc:Ignorable="d"
+        Title="EditDeleteServiceDlg" Height="459.978" Width="741.131">
+    <Grid>
+        <Button HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="103" BorderBrush="{x:Null}" Grid.RowSpan="2" >
+            <Button.Background>
+                <ImageBrush ImageSource="Images/logo_blue-02.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Label Content="View Service" FontSize="28" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="#FF2E6DA0" HorizontalAlignment="Left" Margin="241,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.157,-0.382"/>
+
+        <DataGrid x:Name="gridAnService" IsReadOnly="False" HorizontalAlignment="Left" Height="296" Margin="10,70,0,0" VerticalAlignment="Top"  Width="717" SelectedIndex="1">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete" Click="Delete_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="146,387,0,0" VerticalAlignment="Top" Width="75" Click="Edit_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E6DA0" Offset="0"/>
+                    <GradientStop Color="#34C1D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="470,387,0,0" VerticalAlignment="Top" Width="75" Click="Delete_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E6DA0" Offset="0"/>
+                    <GradientStop Color="#34C1D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

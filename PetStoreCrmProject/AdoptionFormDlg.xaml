@@ -1,0 +1,139 @@
+﻿<Window x:Class="PetStoreCrmProject.AdoptionFormDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:local="clr-namespace:PetStoreCrmProject"
+        mc:Ignorable="d" FontSize="18" ResizeMode="NoResize"  WindowStartupLocation="CenterOwner" 
+        Title="BreedsDlg" Height="1000" Width="880">
+    <Grid Margin="0,24, 10, 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.8*" />
+            <ColumnDefinition Width="2.5*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.6*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="1.4*" />
+            <RowDefinition Height="0.8*" />
+        </Grid.RowDefinitions>
+        <Label Content="Adoption agreement form" FontSize="36" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI Black" Foreground="#FF2E6DA0" Margin="168,6,158,4" Height="56" Width="548" HorizontalContentAlignment="Center"/>
+        <Label Content="Adopter's information" FontSize="18" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Segoe UI Black" Foreground="#FF2E6DA0" Grid.Row="1" Margin="20,10,0,45" Height="36" Grid.RowSpan="2"/>
+
+        <Label Content="Name:" Background="#34C1D6" HorizontalAlignment="left" Margin="23,10,0,3" Width="154" HorizontalContentAlignment="Left" Foreground="White" Padding="8" Grid.Row="2" Height="36"/>
+        <TextBox Name="tbOwnerFirstName" HorizontalAlignment="Left" Height="41" Margin="28,4,0,0"  Width="160" TextWrapping="Wrap" Text="First name"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" GotFocus="tbOwnerFirstName_GotFocus" LostFocus="tbOwnerFirstName_LostFocus"/>
+        <TextBox x:Name="tbOwnerMiddleName" HorizontalAlignment="Left" Height="41" Margin="218,4,0,0"  Width="160" TextWrapping="Wrap" Text="Middle name"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" GotFocus="tbOwnerMiddleName_GotFocus" LostFocus="tbOwnerMiddleName_LostFocus"/>
+        <TextBox x:Name="tbOwnerLastName" HorizontalAlignment="Left" Height="41" Margin="408,4,0,0"  Width="221" TextWrapping="Wrap" Text="Last name"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" GotFocus="tbOwnerLastName_GotFocus" LostFocus="tbOwnerLastName_LostFocus"/>
+
+        <Label Content="Address:" Background="#34C1D6" HorizontalAlignment="Left" Margin="23,6,0,4" Width="154" HorizontalContentAlignment="Left" Foreground="White" Padding="8" Grid.Row="3" Height="36"/>
+        <TextBox Name="tbOwnerAddress" HorizontalAlignment="Left" Height="41" Margin="28,4,0,0"  Width="602" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" />
+
+        <Label Content="City:" Background="#34C1D6" HorizontalAlignment="Left" Margin="23,6,0,4" Width="154" HorizontalContentAlignment="Left" Foreground="White" Padding="8,8,8,0" Grid.Row="4" Height="36"/>
+        <TextBox Name="tbOwnerCity" HorizontalAlignment="Left" Height="41" Margin="28,3,0,0"  Width="290" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" />
+
+        <Label Content="Province:" Background="#34C1D6" HorizontalAlignment="Left" Margin="360,7,0,3" Width="93" HorizontalContentAlignment="Left" Foreground="White" Padding="8" Grid.Row="4" Height="36" Grid.Column="1"/>
+        <ComboBox Name="comboOwnerProvince" HorizontalAlignment="Left" Height="41" Margin="463,4,0,0"  Width="166" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4"/>
+
+        <Label Content="Country:" Background="#34C1D6" HorizontalAlignment="Left" Margin="23,6,0,4" Width="154" HorizontalContentAlignment="Left" Foreground="White" Grid.Row="5" Height="36" Padding="8,8,8,0" />
+        <TextBox Name="tbOwnerCountry" HorizontalAlignment="Left" Height="41" Margin="28,1,0,0"  Width="290" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" Text="Canada" IsReadOnly="True"/>
+
+        <Label Content="Postal code:" Background="#34C1D6" HorizontalAlignment="Left" Margin="360,8,0,4" Width="93" HorizontalContentAlignment="Left" Foreground="White" Padding="4,8,0,0"  Grid.Row="5" Height="36" Grid.Column="1" FontSize="16"/>
+        <TextBox Name="tbOwnerZIP" HorizontalAlignment="Left" Height="33" Margin="464,11,0,0"  Width="166" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" />
+
+        <Label Content="Phone:" Background="#34C1D6" HorizontalAlignment="Left" Margin="23,5,0,5" Width="154" HorizontalContentAlignment="Left" Foreground="White" Grid.Row="6" Height="36"  Padding="8"/>
+        <TextBox Name="tbOwnerPrimaryPhone" HorizontalAlignment="Left" Height="41" Margin="28,3,0,0"  Width="290" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" Text="Primary" GotFocus="tbOwnerPrimaryPhone_GotFocus" LostFocus="tbOwnerPrimaryPhone_LostFocus"/>
+        <TextBox Name="tbOwnerSecondaryPhone" HorizontalAlignment="Left" Height="41" Margin="361,3,0,0"  Width="271" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" Text="Secondary" GotFocus="tbOwnerSecondaryPhone_GotFocus" LostFocus="tbOwnerSecondaryPhone_LostFocus"/>
+
+        <Label Content="Email:" Background="#34C1D6" HorizontalAlignment="Left" Margin="23,8,0,2" Width="154" HorizontalContentAlignment="Left" Foreground="White" Grid.Row="7" Height="36"  Padding="8"/>
+        <TextBox Name="tbOwnerEmail" HorizontalAlignment="Left" Height="41" Margin="28,3,0,0"  Width="602" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="7" />
+
+
+        <Label Content="Adoptive pet's information" FontSize="18" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Segoe UI Black" Foreground="#FF2E6DA0" Grid.Row="8" Margin="20,11,0,46" Height="34" Grid.RowSpan="2"/>
+        <Label Content="Name:" Background="#34C1D6" HorizontalAlignment="Left" Margin="23,8,0,2" Width="154" HorizontalContentAlignment="Left" Foreground="White" Padding="8" Grid.Row="9" Height="36"/>
+        <TextBox Name="tbPetName" HorizontalAlignment="Left" Height="41" Margin="28,4,0,0"  Width="236" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="9" />
+        <Label Content="Id:" Background="#34C1D6" HorizontalAlignment="Left" Margin="360,7,0,3" Width="93" HorizontalContentAlignment="Left" Foreground="White" Padding="8" Grid.Row="9" Height="36" Grid.Column="1"/>
+        <ComboBox Name="comboPetId" HorizontalAlignment="Left" Height="41" Margin="463,3,0,0"  Width="167" VerticalAlignment="Top" Grid.Column="1" Grid.Row="9" SelectionChanged="comboPetId_SelectionChanged"/>
+
+
+        <Label Content="Species:" Background="#34C1D6" HorizontalAlignment="Left" Margin="22,7,0,0" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Grid.Column="0" Grid.Row="10" Padding="8" Height="36" VerticalAlignment="Top"/>
+        <TextBox Name="tbSpecies" HorizontalAlignment="Left" Height="41" Margin="28,4,0,0"  Width="236" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="10" IsReadOnly="True" />
+
+        <Label Content="Breed:" Background="#34C1D6" HorizontalAlignment="Left" Margin="22,7,0,0" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Grid.Column="0" Grid.Row="11" Padding="8" Height="36" VerticalAlignment="Top"/>
+        <TextBox Name="tbBreed" HorizontalAlignment="Left" Height="41" Margin="28,2,0,0"  Width="236" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="11" IsReadOnly="True" />
+
+        <Label Content="Weight(lbs):" Background="#34C1D6" HorizontalAlignment="Left" Margin="23,8,0,2" Width="154" HorizontalContentAlignment="Left" Foreground="White" Grid.Row="12" Height="36" Padding="8,8,8,0" />
+        <TextBox Name="tbWeight" HorizontalAlignment="Left" Height="41" Margin="28,3,0,0"  Width="236" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="12" IsReadOnly="True" />
+
+        <Label Content="Color:" Background="#34C1D6" HorizontalAlignment="Left" Margin="23,8,0,2" Width="154" HorizontalContentAlignment="Left" Foreground="White" Padding="8" Grid.Row="13" Height="36"/>
+        <TextBox x:Name="tbColor" HorizontalAlignment="Left" Height="42" Margin="28,0,0,0"  Width="236" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="13" IsReadOnly="True" />
+
+        <Label Content="Date of birth:" Background="#34C1D6" HorizontalAlignment="Left" Margin="22,7,0,0" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Grid.Column="0" Grid.Row="14" Padding="8" Height="36" VerticalAlignment="Top"/>
+        <TextBox Name="tbDOB" HorizontalAlignment="Left" Height="42" Margin="28,2,0,0"  Width="236" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="14" IsReadOnly="True" />
+
+        <Label Content="Gender:" Background="#34C1D6" HorizontalAlignment="Left" Margin="301,7,0,0" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Grid.Column="1" Grid.Row="11" Padding="8" Height="36" VerticalAlignment="Top"/>
+        <TextBox Name="tbGender" HorizontalAlignment="Left" Height="33" Margin="478,9,0,0"  Width="154" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="11" IsReadOnly="True" />
+
+        <Label Content="Microchipped:" Background="#34C1D6" HorizontalAlignment="Left" Margin="301,8,0,0" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Grid.Column="1" Grid.Row="12" Height="36" VerticalAlignment="Top" Padding="8,8,8,0" />
+        <TextBox Name="tbMicrochipped" HorizontalAlignment="Left" Height="33" Margin="478,10,0,0"  Width="154" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="12" IsReadOnly="True" />
+
+        <Label Content="Wormed:" Background="#34C1D6" HorizontalAlignment="Left" Margin="301,8,0,0" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Grid.Column="1" Grid.Row="13" Padding="8" Height="36" VerticalAlignment="Top"/>
+        <TextBox Name="tbWormed" HorizontalAlignment="Left" Height="33" Margin="478,9,0,0"  Width="154" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="13" IsReadOnly="True" />
+
+        <Label Content="Neutered:" Background="#34C1D6" HorizontalAlignment="Left" Margin="301,9,0,0" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Grid.Column="1" Grid.Row="14" Padding="8" Height="36" VerticalAlignment="Top"/>
+        <TextBox Name="tbNeutured" HorizontalAlignment="Left" Height="32" Margin="478,12,0,0"  Width="154" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Grid.Row="14" IsReadOnly="True" />
+
+        <Label Content="Adoptive agreement" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Segoe UI Black" Foreground="#FF2E6DA0" Grid.Row="15" Margin="20,9,0,110" Height="35" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="212"/>
+
+        <Label Content="Adoption date:" Background="#34C1D6" HorizontalAlignment="Left" Margin="22,16,0,0" Width="154" HorizontalContentAlignment="Left" Foreground="White" FontSize="18" Grid.Column="0" Grid.Row="16" Padding="8,8,8,0"  Height="36" VerticalAlignment="Top"/>
+        <DatePicker Name="dpAdoptionDate" HorizontalAlignment="Left" Height="39" Margin="23,67,0,0" Grid.Row="16" VerticalAlignment="Top" Width="153"/>
+
+        <TextBlock Grid.Column="1" Height="100" Margin="24,10.346,60,0" Grid.Row="16" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10"><Run Text="I agree to provide care from this day forward my new pet. A life-long commitment, comfortable and safe environment, proper grooming and medical attention if needed. This includes keeping the pet parasite free, up to date with vaccinations, proper nutrition and fresh water at all times. "/><LineBreak/><Run Text="If at any time, &quot;I, the Adopter&quot;, can longer retain possession of the above mentioned pet, Pet adoption store is to be notified of resuming ownership in order to find it a new home."/><LineBreak/><Run/><LineBreak/><Run FontSize="12" Text="Adopter's signature: _________________________________________________________"/></TextBlock>
+
+        <Button Name="btCancel" Content="Cancel" IsCancel="True" HorizontalAlignment="Left" Height="33" Width="136" Grid.Column="1" Grid.Row="17" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Margin="22,16,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E6DA0" Offset="0"/>
+                    <GradientStop Color="#34C1D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="btPrint" Content="Print the Form" Grid.Column="1" Grid.Row="17" Padding="0" Margin="241,17,284,0" VerticalAlignment="Top" Click="btPrint_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E6DA0" Offset="0"/>
+                    <GradientStop Color="#34C1D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="btSaveExit" Content="Save and Exit" HorizontalAlignment="Left" Height="33" Width="136" Grid.Column="1" Grid.Row="17" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Margin="453,16,0,0" Click="btSaveExit_Click" VerticalAlignment="Top">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2E6DA0" Offset="0"/>
+                    <GradientStop Color="#34C1D6" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="55" Margin="21,2,0,0" VerticalAlignment="Top" Width="103" BorderBrush="{x:Null}" >
+            <Button.Background>
+                <ImageBrush ImageSource="Images/logo_blue-02.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+
+
+    </Grid>
+</Window>

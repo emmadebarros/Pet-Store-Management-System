@@ -1,0 +1,4 @@
+﻿Emplo+A1:N1yeeID,Name,MiddleName,LastName,Position,SIN,StartDate,EndDate,PrimaryPhone,SecondaryPhone,Email,CRMPasword,Note,Address,PostalCode,City,Province,Country
+,John,Samuel,Smith,9,183 193 523,2/13/2021,,(514)456-7890,,J.Smith@ourshelter.com,Password,,123 Smothinson,J0T 2R0,Val-Morin,11,Canada
+,James,,Moryak,3,134 244 284,2/14/2021,,(514)456-7691,,J.Moryak@ourshelter.com,Password,,345 Randomrue,J0T 2R1,Val-Morin,11,Canada
+,Elisabeth,,Wellerman,4,745 385 945,2/15/2021,,(514)456-7492,(514)456-7492,E.Wellerman@ourshelter.com,Password,,124 Smothinson,J0T 2R2,Val-Morin,11,Canada

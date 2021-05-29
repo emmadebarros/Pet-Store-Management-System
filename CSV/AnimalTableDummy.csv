@@ -1,0 +1,11 @@
+﻿AnimalID,Species,Gender,BreedID,Weight(lbs),Photo,DOB,Name,DateArrived,DateAdopted,Microchiped,Wormed,Neutured,OwnerID,CrateID,Description
+,2,1,4,9,,2/12/2017,Ruby,4/12/2021,,1,1,1,,,"Gentle, Friendly"
+,1,1,5,40,,11/24/2020,Leeloo,4/12/2021,,1,1,0,,,"Gentle, Friendly"
+,1,2,1,99,,4/30/2019,Doug,4/12/2021,,1,0,1,,,Friendly
+,1,2,2,32,,7/12/2017,Sam,4/12/2021,,1,1,1,,,Requires Training
+,2,2,4,13,,5/4/2016,Frank,4/12/2021,,1,1,1,,,Requires Training
+,2,1,5,11,,6/13/2020,Lisa,4/12/2021,4/13/2021,1,1,1,1,,"Gentle, Friendly"
+,1,2,1,56,,6/13/2020,Mark,4/12/2021,,0,1,1,,,"Gentle, Friendly"
+,2,2,4,12,,4/30/2015,,4/12/2021,,1,1,1,,,"Gentle, Friendly"
+,3,1,6,2,,1/12/2021,Laura,4/12/2021,,1,1,0,,,Must be adopted with Simon
+,3,2,7,3,,1/12/2021,Simon,4/12/2021,,1,1,0,,,Must be adopted with Laura

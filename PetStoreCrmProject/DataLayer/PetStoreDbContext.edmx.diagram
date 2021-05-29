@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="42a45eb707f64d36b7ad35f43901e1c9" Name="Diagram1">
+        <EntityTypeShape EntityType="PetStoreCrmModel.Animal_Service" Width="1.5" PointX="7.875" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetStoreCrmModel.Animal" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetStoreCrmModel.Breed" Width="1.5" PointX="3.375" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetStoreCrmModel.Crate" Width="1.5" PointX="3.375" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetStoreCrmModel.Employee" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetStoreCrmModel.Owner" Width="1.5" PointX="0.875" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="PetStoreCrmModel.fk_Animal_Services_Animals" ManuallyRouted="false" />
+        <AssociationConnector Association="PetStoreCrmModel.fk_Animal_Services_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="PetStoreCrmModel.fk_Animals_Breeds" ManuallyRouted="false" />
+        <AssociationConnector Association="PetStoreCrmModel.fk_Animals_Crates" ManuallyRouted="false" />
+        <AssociationConnector Association="PetStoreCrmModel.fk_Animals_Owners" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

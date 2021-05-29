@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PetStoreCrmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Animal Services">
+          <Key>
+            <PropertyRef Name="AnimalID" />
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="ServiceDate" />
+          </Key>
+          <Property Name="AnimalID" Type="int" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="ServiceType" Type="int" Nullable="false" />
+          <Property Name="ServiceDate" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Animals">
+          <Key>
+            <PropertyRef Name="AnimalID" />
+          </Key>
+          <Property Name="AnimalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Species" Type="int" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="BreedID" Type="int" Nullable="false" />
+          <Property Name="Weight" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Photo" Type="image" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateArrived" Type="date" Nullable="false" />
+          <Property Name="DateAdopted" Type="date" />
+          <Property Name="Microchipped" Type="bit" Nullable="false" />
+          <Property Name="Wormed" Type="bit" Nullable="false" />
+          <Property Name="Neutured" Type="bit" Nullable="false" />
+          <Property Name="OwnerID" Type="int" />
+          <Property Name="CrateID" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Breeds">
+          <Key>
+            <PropertyRef Name="BreedID" />
+          </Key>
+          <Property Name="BreedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BreedName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SpeciesCode" Type="int" Nullable="false" />
+          <Property Name="Color" Type="int" Nullable="false" />
+          <Property Name="Size" Type="int" Nullable="false" />
+          <Property Name="FurType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Crates">
+          <Key>
+            <PropertyRef Name="CrateID" />
+          </Key>
+          <Property Name="CrateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Size" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="SIN" Type="nchar" MaxLength="11" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="PrimaryPhone" Type="nchar" MaxLength="13" Nullable="false" />
+          <Property Name="SecondaryPhone" Type="nchar" MaxLength="13" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="CrmPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Note" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PostalCode" Type="nchar" MaxLength="7" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Province" Type="int" Nullable="false" />
+          <Property Name="Country" Type="nchar" MaxLength="6" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Owners">
+          <Key>
+            <PropertyRef Name="OwnerID" />
+          </Key>
+          <Property Name="OwnerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrimaryPhone" Type="nchar" MaxLength="13" Nullable="false" />
+          <Property Name="SecondaryPhone" Type="nchar" MaxLength="13" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PostalCode" Type="nchar" MaxLength="7" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Province" Type="int" Nullable="false" />
+          <Property Name="Country" Type="nchar" MaxLength="6" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+          <Property Name="Note" Type="nvarchar" MaxLength="200" />
+          <Property Name="Fostering" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_Animal_Services_Animals">
+          <End Role="Animals" Type="Self.Animals" Multiplicity="1" />
+          <End Role="Animal Services" Type="Self.Animal Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animals">
+              <PropertyRef Name="AnimalID" />
+            </Principal>
+            <Dependent Role="Animal Services">
+              <PropertyRef Name="AnimalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Animal_Services_Employees">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Animal Services" Type="Self.Animal Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Animal Services">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Animals_Breeds">
+          <End Role="Breeds" Type="Self.Breeds" Multiplicity="1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Breeds">
+              <PropertyRef Name="BreedID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="BreedID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Animals_Crates">
+          <End Role="Crates" Type="Self.Crates" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Crates">
+              <PropertyRef Name="CrateID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="CrateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Animals_Owners">
+          <End Role="Owners" Type="Self.Owners" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="OwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PetStoreCrmModelStoreContainer">
+          <EntitySet Name="Animal Services" EntityType="Self.Animal Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Animals" EntityType="Self.Animals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Breeds" EntityType="Self.Breeds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Crates" EntityType="Self.Crates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Owners" EntityType="Self.Owners" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_Animal_Services_Animals" Association="Self.fk_Animal_Services_Animals">
+            <End Role="Animals" EntitySet="Animals" />
+            <End Role="Animal Services" EntitySet="Animal Services" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Animal_Services_Employees" Association="Self.fk_Animal_Services_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Animal Services" EntitySet="Animal Services" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Animals_Breeds" Association="Self.fk_Animals_Breeds">
+            <End Role="Breeds" EntitySet="Breeds" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Animals_Crates" Association="Self.fk_Animals_Crates">
+            <End Role="Crates" EntitySet="Crates" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Animals_Owners" Association="Self.fk_Animals_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PetStoreCrmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Animal_Service">
+          <Key>
+            <PropertyRef Name="AnimalID" />
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="ServiceDate" />
+          </Key>
+          <Property Name="AnimalID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceType" Type="PetStoreCrmModel.ServiceType" Nullable="false" />
+          <Property Name="ServiceDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Animal" Relationship="Self.fk_Animal_Services_Animals" FromRole="Animal_Services" ToRole="Animals" />
+          <NavigationProperty Name="Employee" Relationship="Self.fk_Animal_Services_Employees" FromRole="Animal_Services" ToRole="Employees" />
+        </EntityType>
+        <EntityType Name="Animal">
+          <Key>
+            <PropertyRef Name="AnimalID" />
+          </Key>
+          <Property Name="AnimalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Species" Type="PetStoreCrmModel.SpeciesType" Nullable="false" />
+          <Property Name="Gender" Type="PetStoreCrmModel.GenderType" Nullable="false" />
+          <Property Name="BreedID" Type="Int32" Nullable="false" />
+          <Property Name="Weight" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateArrived" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateAdopted" Type="DateTime" Precision="0" />
+          <Property Name="Microchipped" Type="Boolean" Nullable="false" />
+          <Property Name="Wormed" Type="Boolean" Nullable="false" />
+          <Property Name="Neutured" Type="Boolean" Nullable="false" />
+          <Property Name="OwnerID" Type="Int32" />
+          <Property Name="CrateID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Animal_Services" Relationship="Self.fk_Animal_Services_Animals" FromRole="Animals" ToRole="Animal_Services" />
+          <NavigationProperty Name="Breed" Relationship="Self.fk_Animals_Breeds" FromRole="Animals" ToRole="Breeds" />
+          <NavigationProperty Name="Crate" Relationship="Self.fk_Animals_Crates" FromRole="Animals" ToRole="Crates" />
+          <NavigationProperty Name="Owner" Relationship="Self.fk_Animals_Owners" FromRole="Animals" ToRole="Owners" />
+        </EntityType>
+        <EntityType Name="Breed">
+          <Key>
+            <PropertyRef Name="BreedID" />
+          </Key>
+          <Property Name="BreedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BreedName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SpeciesCode" Type="Int32" Nullable="false" />
+          <Property Name="Color" Type="PetStoreCrmModel.ColorType" Nullable="false" />
+          <Property Name="Size" Type="PetStoreCrmModel.SizeType" Nullable="false" />
+          <Property Name="FurType" Type="PetStoreCrmModel.FurType" Nullable="false" />
+          <NavigationProperty Name="Animals" Relationship="Self.fk_Animals_Breeds" FromRole="Breeds" ToRole="Animals" />
+        </EntityType>
+        <EntityType Name="Crate">
+          <Key>
+            <PropertyRef Name="CrateID" />
+          </Key>
+          <Property Name="CrateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Size" Type="PetStoreCrmModel.CrateSizeType" Nullable="false" />
+          <NavigationProperty Name="Animals" Relationship="Self.fk_Animals_Crates" FromRole="Crates" ToRole="Animals" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Position" Type="PetStoreCrmModel.PositionType" Nullable="false" />
+          <Property Name="SIN" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="PrimaryPhone" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SecondaryPhone" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CrmPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="7" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Province" Type="PetStoreCrmModel.ProvinceType" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Animal_Services" Relationship="Self.fk_Animal_Services_Employees" FromRole="Employees" ToRole="Animal_Services" />
+        </EntityType>
+        <EntityType Name="Owner">
+          <Key>
+            <PropertyRef Name="OwnerID" />
+          </Key>
+          <Property Name="OwnerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PrimaryPhone" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SecondaryPhone" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="7" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Province" Type="PetStoreCrmModel.ProvinceType" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Fostering" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Animals" Relationship="Self.fk_Animals_Owners" FromRole="Owners" ToRole="Animals" />
+        </EntityType>
+        <Association Name="fk_Animal_Services_Animals">
+          <End Role="Animals" Type="Self.Animal" Multiplicity="1" />
+          <End Role="Animal_Services" Type="Self.Animal_Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animals">
+              <PropertyRef Name="AnimalID" />
+            </Principal>
+            <Dependent Role="Animal_Services">
+              <PropertyRef Name="AnimalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Animal_Services_Employees">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Animal_Services" Type="Self.Animal_Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Animal_Services">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Animals_Breeds">
+          <End Role="Breeds" Type="Self.Breed" Multiplicity="1" />
+          <End Role="Animals" Type="Self.Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Breeds">
+              <PropertyRef Name="BreedID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="BreedID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Animals_Crates">
+          <End Role="Crates" Type="Self.Crate" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Crates">
+              <PropertyRef Name="CrateID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="CrateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Animals_Owners">
+          <End Role="Owners" Type="Self.Owner" Multiplicity="0..1" />
+          <End Role="Animals" Type="Self.Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Owners">
+              <PropertyRef Name="OwnerID" />
+            </Principal>
+            <Dependent Role="Animals">
+              <PropertyRef Name="OwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PetStoreDbContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Animal_Services" EntityType="Self.Animal_Service" />
+          <EntitySet Name="Animals" EntityType="Self.Animal" />
+          <EntitySet Name="Breeds" EntityType="Self.Breed" />
+          <EntitySet Name="Crates" EntityType="Self.Crate" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Owners" EntityType="Self.Owner" />
+          <AssociationSet Name="fk_Animal_Services_Animals" Association="Self.fk_Animal_Services_Animals">
+            <End Role="Animals" EntitySet="Animals" />
+            <End Role="Animal_Services" EntitySet="Animal_Services" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Animal_Services_Employees" Association="Self.fk_Animal_Services_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Animal_Services" EntitySet="Animal_Services" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Animals_Breeds" Association="Self.fk_Animals_Breeds">
+            <End Role="Breeds" EntitySet="Breeds" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Animals_Crates" Association="Self.fk_Animals_Crates">
+            <End Role="Crates" EntitySet="Crates" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Animals_Owners" Association="Self.fk_Animals_Owners">
+            <End Role="Owners" EntitySet="Owners" />
+            <End Role="Animals" EntitySet="Animals" />
+          </AssociationSet>
+        </EntityContainer>
+        <EnumType Name="SpeciesType">
+          <Member Name="Dog" Value="1" />
+          <Member Name="Cat" Value="2" />
+          <Member Name="GuineaPig" Value="3" />
+          <Member Name="Fish" Value="4" />
+          <Member Name="Bird" Value="5" />
+          <Member Name="Hamster" Value="6" />
+          <Member Name="Mouse" Value="7" />
+          <Member Name="Rabbit" Value="8" />
+          <Member Name="Rat" Value="9" />
+          <Member Name="Hedgehog" Value="10" />
+          <Member Name="Ferret" Value="11" />
+        </EnumType>
+        <EnumType Name="GenderType">
+          <Member Name="F" Value="1" />
+          <Member Name="M" Value="2" />
+        </EnumType>
+        <EnumType Name="ColorType">
+          <Member Name="White" Value="1" />
+          <Member Name="Black" Value="2" />
+          <Member Name="Brown" Value="3" />
+          <Member Name="Gold" Value="4" />
+          <Member Name="Yellow" Value="5" />
+          <Member Name="Red" Value="6" />
+          <Member Name="Cream" Value="7" />
+          <Member Name="Blue" Value="8" />
+          <Member Name="Grey" Value="9" />
+          <Member Name="BlackTan" Value="10" />
+          <Member Name="BrownTan" Value="11" />
+          <Member Name="BlueTan" Value="12" />
+          <Member Name="IrishSpotted" Value="13" />
+          <Member Name="Flashy" Value="14" />
+          <Member Name="Patched" Value="15" />
+          <Member Name="Tuxedo" Value="16" />
+          <Member Name="RedMerle" Value="17" />
+          <Member Name="BlueMerle" Value="18" />
+          <Member Name="Harlequin" Value="19" />
+          <Member Name="Spotted" Value="20" />
+          <Member Name="BrownTicked" Value="21" />
+          <Member Name="BlueSpeckled" Value="22" />
+          <Member Name="Brindle" Value="23" />
+          <Member Name="Saddle" Value="24" />
+          <Member Name="Variety" Value="25" />
+        </EnumType>
+        <EnumType Name="SizeType" >
+          <Member Name="XSmall" Value="1" />
+          <Member Name="Small" Value="2" />
+          <Member Name="Medium" Value="3" />
+          <Member Name="Large" Value="4" />
+        </EnumType>
+        <EnumType Name="FurType">
+          <Member Name="Hairless" Value="1" />
+          <Member Name="Short" Value="2" />
+          <Member Name="Medium" Value="3" />
+          <Member Name="Long" Value="4" />
+        </EnumType>
+        <EnumType Name="ServiceType">
+          <Member Name="Treatment" Value="1" />
+          <Member Name="Vaccination" Value="2" />
+          <Member Name="Training" Value="3" />
+          <Member Name="Worming" Value="4" />
+          <Member Name="Neuturing" Value="5" />
+          <Member Name="Microchipping" Value="6" />
+          <Member Name="Grooming" Value="7" />
+        </EnumType>
+        <EnumType Name="PositionType">
+          <Member Name="Manager" Value="1" />
+          <Member Name="Administrator" Value="2" />
+          <Member Name="Veterinarian" Value="3" />
+          <Member Name="Trainer" Value="4" />
+          <Member Name="VetAssistant" Value="5" />
+          <Member Name="CareTaker" Value="6" />
+          <Member Name="Behaviorist" Value="7" />
+          <Member Name="Breeder" Value="8" />
+          <Member Name="Groomer" Value="9" />
+        </EnumType>
+        <EnumType Name="ProvinceType">
+          <Member Name="Alberta" Value="1" />
+          <Member Name="BritishColumbia" Value="2" />
+          <Member Name="Manitoba" Value="3" />
+          <Member Name="NewBrunswick" Value="4" />
+          <Member Name="NewfoundlandAndLabrador" Value="5" />
+          <Member Name="NorthwestTerritories" Value="6" />
+          <Member Name="NovaScotia" Value="7" />
+          <Member Name="Nunavut" Value="8" />
+          <Member Name="Ontario" Value="9" />
+          <Member Name="PrinceEdwardIsland" Value="10" />
+          <Member Name="Quebec" Value="11" />
+          <Member Name="Saskatchewan" Value="12" />
+          <Member Name="Yukon" Value="13" />
+        </EnumType>
+        <EnumType Name="CrateSizeType">
+          <Member Name="XSmall" Value="1" />
+          <Member Name="Small" Value="2" />
+          <Member Name="Medium" Value="3" />
+          <Member Name="Large" Value="4" />
+          <Member Name="XLarge" Value="5" />
+        </EnumType>
+        <EnumType Name="OwnerProvinceType" a:ExternalTypeName="PetStoreCrmProject.ProvinceType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PetStoreCrmModelStoreContainer" CdmEntityContainer="PetStoreDbContext">
+          <EntitySetMapping Name="Animal_Services">
+            <EntityTypeMapping TypeName="PetStoreCrmModel.Animal_Service">
+              <MappingFragment StoreEntitySet="Animal Services">
+                <ScalarProperty Name="AnimalID" ColumnName="AnimalID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+                <ScalarProperty Name="ServiceDate" ColumnName="ServiceDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Animals">
+            <EntityTypeMapping TypeName="PetStoreCrmModel.Animal">
+              <MappingFragment StoreEntitySet="Animals">
+                <ScalarProperty Name="AnimalID" ColumnName="AnimalID" />
+                <ScalarProperty Name="Species" ColumnName="Species" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="BreedID" ColumnName="BreedID" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DateArrived" ColumnName="DateArrived" />
+                <ScalarProperty Name="DateAdopted" ColumnName="DateAdopted" />
+                <ScalarProperty Name="Microchipped" ColumnName="Microchipped" />
+                <ScalarProperty Name="Wormed" ColumnName="Wormed" />
+                <ScalarProperty Name="Neutured" ColumnName="Neutured" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="CrateID" ColumnName="CrateID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Breeds">
+            <EntityTypeMapping TypeName="PetStoreCrmModel.Breed">
+              <MappingFragment StoreEntitySet="Breeds">
+                <ScalarProperty Name="BreedID" ColumnName="BreedID" />
+                <ScalarProperty Name="BreedName" ColumnName="BreedName" />
+                <ScalarProperty Name="SpeciesCode" ColumnName="SpeciesCode" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="FurType" ColumnName="FurType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Crates">
+            <EntityTypeMapping TypeName="PetStoreCrmModel.Crate">
+              <MappingFragment StoreEntitySet="Crates">
+                <ScalarProperty Name="CrateID" ColumnName="CrateID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="PetStoreCrmModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="SIN" ColumnName="SIN" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+                <ScalarProperty Name="SecondaryPhone" ColumnName="SecondaryPhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="CrmPassword" ColumnName="CrmPassword" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Owners">
+            <EntityTypeMapping TypeName="PetStoreCrmModel.Owner">
+              <MappingFragment StoreEntitySet="Owners">
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="PrimaryPhone" ColumnName="PrimaryPhone" />
+                <ScalarProperty Name="SecondaryPhone" ColumnName="SecondaryPhone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Fostering" ColumnName="Fostering" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

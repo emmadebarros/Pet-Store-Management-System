@@ -1,0 +1,514 @@
+2021/04/08 Elina
+1. What I have done / not done since last Scrum?
+	- Work on project proposal 
+	- Create mockups for the main window and custom dialog windows
+	- Create database tables / entities
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Finalize database design/ entities and relationships among them
+3. Where do I need assistance? What do I need to figure out?
+	- Database-first entity framwork
+	- WPF menu design
+
+2021/04/08 Raisa
+1. What I have done / not done since last Scrum?
+	- Planned the database etities and related fields
+	- Created diagram based on the entities
+	- Determined relations between tables
+	- Helped in designing of Mock-up
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- adjust the tables
+	- finalize the tables
+	- split the work accordingly
+3. Where do I need assistance? What do I need to figure out?
+	- need more time to figure it out
+
+2021/04/08 Emma
+1. What I have done / not done since last Scrum?
+	- Work on project proposal 
+	- Create git repo
+	- Create trello board
+	- Create proposal doc
+	- Database design
+	- Application mockup
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Start implementing the main interface with WPF
+3. Where do I need assistance? What do I need to figure out?
+	- Database first design
+	
+---------------------------------------------------------------------------------------
+	
+2021/04/09 Elina
+1. What I have done / not done since last Scrum?
+	- Finalize 6 tables / entities, realtionships beteewn entities and attributes
+	- Learn UI Interface creation with Material design 
+	- Write User Storiesin Trello
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Create tables in SSMS
+	- Start database-first entity framework implementation
+	- Design main window using Material design 
+3. Where do I need assistance? What do I need to figure out?
+	- Database-first entity framwork with WPF
+	
+2021/04/09 Raisa
+1. What I have done / not done since last Scrum?
+	Done:
+	- Adjusted the trello cards
+    - Adjusted the final version of proposal
+	Not Done:
+	- Did not connect to git repository
+    - Did not start creating interface
+    - Did not start coding
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Donnect to fit repository
+    - Dtart creaating interface
+3. Where do I need assistance? What do I need to figure out?
+	- Need more time to figure it out
+	
+2021/04/09 Emma
+1. What I have done / not done since last Scrum?
+	Done:
+	- Participated in finishing the Trello board
+	- Create msSQL database in Azure
+	- Connected database to Visual Studio and SSMS
+	- Finished project proposal and submitted
+	Not Done:
+	- Created tables in database
+	- Create project
+	- Connect DB to project
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Create tables in database
+	- Create project
+	- Connect database to project
+	- Start working in main interface with material design
+	- Make a schedule for user stories due date (Trello)
+3. Where do I need assistance? What do I need to figure out?
+	- Do we need to create schemas?
+	- Lookup table for Country, Province, City?
+	- Relations in DB made with code or SQL script?
+	- Exact due date of the project?
+	- API calls for validation
+	- Enums in T-SQL - Entity Framework
+	
+---------------------------------------------------------------------------------------
+
+2021/04/09 Elina - Before Weekend Scrum
+1. What I have done / not done since last Scrum?
+    - Research about data types - Enums and images to create tables
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create tables in SSMS
+    - Start database-first entity framework implementation
+    - Design main window using Material design 
+3. Where do I need assistance? What do I need to figure out?
+    - Database-first entity framwork with WPF
+    - Learn more about data types of Transact-SQL
+	
+2021/04/09 Raisa - Before Weekend Scrum
+1. What I have done / not done since last Scrum?
+	Done:
+    - did reseach on datatypes for tsql
+    - did reasearch on database creation
+    - did research on Azure
+    - connected to git repository
+	Not Done:
+    - did not start creating database
+    - did not start creating interface
+    - did not start coding
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - create database
+    - connect to Emma's database
+    - connect to git repository
+    - start creaating interface
+3. Where do I need assistance? What do I need to figure out?
+    - need more time to figure it out
+	
+2021/04/09 Emma - Before Weekend Scrum
+1. What I have done / not done since last Scrum?
+	Done:
+	- Research on t-sql enums and API calls for validation with Canada Post
+	Not Done:
+	- Created tables in database
+	- Create project
+	- Connect DB to project
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Create tables in database
+	- Create project
+	- Connect database to project
+	- Start working in main interface with material design
+	- Make a schedule for user stories due date (Trello)
+3. Where do I need assistance? What do I need to figure out?
+	- API calls for validation (later)
+	- ENUMS (we'll try to figure it out with tutorial)
+	
+---------------------------------------------------------------------------------------
+
+2021/04/11 Elina - Weekend Scrum
+1. What I have done / not done since last Scrum?
+    - Finalized database
+    - Set up visual studio project with database in azure
+    - Created mock-ups for the main page/ not done - custom dialog windows
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Make database records through user input
+    - Create mock-ups for custom dialog
+3. Where do I need assistance? What do I need to figure out?
+    - Figure out how to add Enum value on run time
+    - Validation in database or in the solution?
+	
+2021/04/11 Raisa - Weekend Scrum
+1. What I have done / not done since last Scrum?
+    - Worked on creating database
+    - Researched information about azure database connection
+    - Working on another version of mockup
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - create a perfect mockup
+    - split the work accordingly
+3. Where do I need assistance? What do I need to figure out?
+    - need more time to figure it out
+	
+2021/04/11 Emma - Weekend Scrum
+1. What I have done / not done since last Scrum?
+    - Created the tables and constraints in the database with SSMS
+	- Connected database to project through VS
+	- Worked on design
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Read on turning fields into ENUM with entity framework and database first design
+    - Design draft of main interface and first dialog
+3. Where do I need assistance? What do I need to figure out?
+    - For login page, would we have it as a dialog or main WPF window...
+	
+---------------------------------------------------------------------------------------
+
+2021/04/12 Elina
+1. What I have done / not done since last Scrum?
+    - Finalize main window
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create dialog window for add/update animals
+    - Add animals and make sure the record is added in the database
+3. Where do I need assistance? What do I need to figure out?
+    - Figure out how to add Enum value on run time
+    - Validation in database or in the solution?
+    - Figure about the login page
+
+2021/04/12 Raisa
+1. What I have done / not done since last Scrum?
+    Done:
+    - did reseach on datatypes for tsql
+    - did reasearch on database creation
+    - did research on Azure
+    - connected to Azure
+    Not Done:
+    - did not start coding
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create visual side of the interface
+    - connect to Emma's database
+    - Start the code
+3. Where do I need assistance? What do I need to figure out?
+    - need more time to figure it out
+
+2021/04/12 Emma
+1. What I have done / not done since last Scrum?
+    - Worked on my design proposition for the main interface
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Read on turning fields into ENUM with entity framework and database first design
+	- Make up some dummy data and insert records into database
+3. Where do I need assistance? What do I need to figure out?
+    - For login page, would we have it as a dialog or main WPF window...
+	
+---------------------------------------------------------------------------------------
+
+2021/04/13 Elina
+1. What I have done / not done since last Scrum?
+    - Modified the design with grids
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Code, code, code!
+    - Make responsive design
+3. Where do I need assistance? What do I need to figure out?
+    - Wizard 
+    - Animated design
+
+2021/04/13 Raisa
+1. What I have done / not done since last Scrum?
+    Done:
+    - did reseach on datatypes for tsql
+    - did reasearch on database creation
+    - did research on Azure
+    - connected to Azure
+    Not Done:
+    - did not start coding
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create visual side of the interface
+    - input the CSV files
+    - Start the code
+3. Where do I need assistance? What do I need to figure out?
+    - need more time to figure it out
+    - read on Wizard
+
+2021/04/13 Emma
+1. What I have done / not done since last Scrum?
+  	- Made some research on responsive material design layout
+    - Re-created our database from scratch because of bad design with a lookup table and FK-PK
+	- Re-created the whole project because with major issues with update db from entity framework
+	- Connected project with new DB
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Insert dummy data with CSV
+	- Implement add/update/delete
+	- Implement login page
+3. Where do I need assistance? What do I need to figure out?
+	- Animated side menu
+    - How to make the login window appear before main window...
+	- Wizard for dialog
+	
+---------------------------------------------------------------------------------------
+
+2021/04/14 Elina
+1. What I have done / not done since last Scrum?
+    - Created Enums in entity framework
+    - Inserted some data to database
+    - Not done - coding
+    - Not done - responsive design
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Fix the issues with database concerning Enum conversion (obstacle to move forward with our project)
+    - Code, code, code!
+    - Make responsive design
+3. Where do I need assistance? What do I need to figure out?
+    - Wizard 
+    - Animated design
+    - Assign the value of ProvinceType using 'Reference external type' for more than one table (Owner, Employee)
+
+2021/04/14 Raisa
+1. What I have done / not done since last Scrum?
+    Done:
+    - finalize the CSV files
+    - create enums
+    - started populating the database
+    Not Done:
+    - did not finish population database
+    - did not start coding
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create visual side of the interface for my dialogs
+    - input the CSV files
+    - Start the code
+3. Where do I need assistance? What do I need to figure out?
+    - need more time to figure it out
+    - Wizard
+
+2021/04/14 Emma
+1. What I have done / not done since last Scrum?
+  	- Made some research on login windows with wpf
+    - Generated enums in entity framework
+	- Re-created the whole project because with major issues with update db from entity framework
+	- Connected project with new DB
+	- Started inserting the dummy data in tables to test
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Fix importing CSV problems
+	- Finish inserting data
+	- Start working on login page design/functionnality
+3. Where do I need assistance? What do I need to figure out?
+	- Reference external enum doesn't seem to be working
+    - How to make the login window appear before main window...
+	- Wizard for dialog
+	
+---------------------------------------------------------------------------------------
+
+2021/04/15 Elina
+1. What I have done / not done since last Scrum?
+    - Fix the issues with database concerning Enum conversion and create ProvinceType for 
+      both Owner and Employee tables' Province fields
+    - Design AddDialog window and make add button for adding animals
+    - Not done - responsive design
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Finalize AddDialog window design and coding
+    - Create another dialog
+    - Make responsive design for the main window
+3. Where do I need assistance? What do I need to figure out?
+    - Wizard 
+    - Animated design
+
+2021/04/15 Raisa
+1. What I have done / not done since last Scrum?
+    Done:
+    - Populate the database
+    - Read on wizard
+    - Designed the ServiceDlgDesign
+    - Started coding on ServiceOnDialog
+    Not Done:
+    - did not implement all the features assigned on ServiceDialog
+    - did not start other dialogs
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create visual side of the interface for my dialogs
+    - Implement all the features on ServiceDlg
+    - Design reiured dialogs
+    - Code required dialog
+3. Where do I need assistance? What do I need to figure out?
+    - need more time to figure it out
+    - Wizard
+
+2021/04/15 Emma
+1. What I have done / not done since last Scrum?
+  	- Made some more research on login windows with wpf
+	- Created Services dialog and basic code for path to dialog
+	- Fixed minor issues in the code 
+	- Fixed CSV importing and data issues
+	- Fixed external enum reference
+	- Finished importing data
+	- Started login window
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Finish login window design
+	- Finish login window code
+	- Start another dialog
+3. Where do I need assistance? What do I need to figure out?
+    - How to make the login window appear before main window...
+	- Wizard for dialog
+	
+---------------------------------------------------------------------------------------
+
+2021/04/16 Elina *** Pushed really late at night
+1. What I have done / not done since last Scrum?
+    - Finalized AddDialog window design and coding
+    - Created Breeds dialog window
+    - Not done - responsive design
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Finalize Breeds dialog window
+    - Created Adoption agreement form with wizard
+    - Make responsive design for the main window
+3. Where do I need assistance? What do I need to figure out?
+    - Wizard 
+    - Responsive design
+	
+2021/04/16 Raisa *** Pushed really late at night
+1. What I have done / not done since last Scrum?
+    Done:
+    - Read on wizard
+    - Started coding on ServiceDialog 
+    - Run into multiple issues on ServiceDlg
+    - Adjusted the design of the ServiceDlgDesign 
+    Not Done:
+    - did not implement all the features assigned on ServiceDialog 
+    - did not start other dialogs 
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create visual side of the interface for my dialogs 
+    - Implement all the features on ServiceDlg 
+    - Design reiured dialogs 
+    - Code required dialog 
+3. Where do I need assistance? What do I need to figure out?
+    - What is the reason my code is crashing
+        - need more time to figure it out 
+    - Wizard
+	
+2021/04/16 Emma *** Pushed really late at night
+1. What I have done / not done since last Scrum?
+	- Finished login page entirely
+	- Logout function
+	- Implemented animated menu (to include if rest of window responsive)
+	- Fixed bugs
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Implement printing for Adoption form
+	- Add Wizard
+	- Add Live Charts library for diagrams (???)
+	- Animals dlg with tabs + 3lists + update/delete
+	- Finish all other dlg
+3. Where do I need assistance? What do I need to figure out?
+	- Research printing without .Net Core
+	
+---------------------------------------------------------------------------------------
+	
+2021/04/18 Elina *** Pushed really late at night
+1. What I have done / not done since last Scrum?
+    - Finalize Breeds dialog window
+    - Created Adoption agreement form
+    - Created Owner dialog window
+    - Not done - Created Adoption agreement form with wizard
+    - Not done - Make responsive design for the main window
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Add new employee with wizard
+3. Where do I need assistance? What do I need to figure out?
+    - Wizard 
+    - Responsive design
+	
+2021/04/18 Raisa *** Pushed really late at night
+1. What I have done / not done since last Scrum?
+    Done:
+    - Read on wizard
+    - Restarted Service Dialog
+    - Run into multiple issues on ServiceDlg
+    - Adjusted the design of the ServiceDlgDesign
+    - Created CratesDialog mockup and added  functions 
+    Not Done:
+    - did not implement all the features assigned on ServiceDialog 
+    - did not adjust the design for either of the windows
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create a presentation
+    - Implement all the features on ServiceDlg 
+    - Finish design for reiured dialogs 
+    - Practice presentatio
+    - try to do the JUnitTests
+3. Where do I need assistance? What do I need to figure out?
+    - What is the reason my code is crashing 
+        - need more time to figure it out
+    - Wizard
+	
+2021/04/18 Emma *** Pushed really late at night
+1. What I have done / not done since last Scrum?
+	- Implemented print/pdf
+	- Continued on Animals dlg
+	- Tab for Animals dlg
+	- Update/Delete
+	- Read on UnitTest
+	- Fixed issues in DB
+	- Changing greeting depending on user login
+	- Fixed the closing/terminate program issue
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Wizard (???)
+	- UnitTest
+	- LiveCharts (???)
+	- Finish bug on Animals delete function
+	- Finish Update Animal
+3. Where do I need assistance? What do I need to figure out?
+	- Tutorial on UnitTest
+	
+---------------------------------------------------------------------------------------
+	
+2021/04/19 Elina
+1. What I have done / not done since last Scrum?
+    - Finalize Adoption agreement form
+    - Finalize Owner dialog window
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Add new window dialog for adding employee with wizard
+3. Where do I need assistance? What do I need to figure out?
+    - Wizard 
+    - Responsive design
+	
+	
+2021/04/19 Raisa 
+1. What I have done / not done since last Scrum?
+    Done:
+    - Read on wizard
+    - Run into multiple issues on ServiceDlg 
+    - Adjusted the design of the ServiceDlgDesign 
+    Not Done:
+    - did not implement all the features assigned on ServiceDialog
+    - did not adjust the design for either of the windows 
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Create a presentation
+    - Implement all the features on ServiceDlg
+    - Finish design for reiured dialogs
+    - Practice presentatio 
+    - try to do the JUnitTests
+3. Where do I need assistance? What do I need to figure out? 
+    - What is the reason my code is crashing
+        - need more time to figure it out
+    - Wizard
+	
+2021/04/18 Emma *** Pushed really late at night
+1. What I have done / not done since last Scrum?
+	- Restart Animals dlg with listview instead of datagrid...
+	- Tab for Animals dlg
+	- Update/Delete
+	- Read on UnitTest
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Wizard (???)
+	- UnitTest
+	- LiveCharts (???)
+	- Finish bug on Animals delete/update function
+	- Finish Update Animal
+3. Where do I need assistance? What do I need to figure out?
+	- Tutorial on UnitTest
