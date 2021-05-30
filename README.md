@@ -1,5 +1,5 @@
-# 🐈‍⬛ Pet Store Management System 🐈‍⬛
-# Description
+# 😼 Pet Store Management System 🐶
+## Description
 
 
 This is the source code of the Pet Store Management System project that was created for the purpose of the Visual Basic .Net and C# class' final project, with professor [Gregory Prokopski](https://www.linkedin.com/in/prokopski/) 🔗.
