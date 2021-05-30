@@ -19,7 +19,7 @@ The next step to this project would've been to add an executable file to it in o
 * WPF data binding
 * WPF layouts: Grid, Data Grid, Stack Panel, WrapPanel, Dock Panel
 * WPF standard and custom dialogs
-* Materialize
+* Material Design
 
 ## Contributors:
 [Elina Sardaryan](https://www.linkedin.com/in/elina-sardaryan/) 🔗   
