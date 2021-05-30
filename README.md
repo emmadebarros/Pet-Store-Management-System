@@ -28,8 +28,8 @@ The next step to this project would've been to add an executable file to it in o
 
 ## Resources
 
-Here is the link to our [Trello Board](https://trello.com/b/wqi5e4m1/petstore-project).
+Here is the link to our [Trello Board](https://trello.com/b/wqi5e4m1/petstore-project) 🔗.
 
 You'll also find in this repository our DailyScrum folder, that demonstrates our understanding and use of delivery methodologies used in the industry to date such as SCRUM, LEAN, AGILE and Version Control. 
 
-If you're interested in seeing all of the team's commits and final presentation of the project, you can also take a look at our [Bitbucket repository](https://bitbucket.org/emma96/petstore/src/master/) and [Final Presentation PowerPoint](https://docs.google.com/presentation/d/1tuga94GZAbLAihIB48S4_Tmrg5g2K61eDz2fssRGSNk/edit#slide=id.p).
+If you're interested in seeing all of the team's commits and final presentation of the project, you can also take a look at our [Bitbucket repository](https://bitbucket.org/emma96/petstore/src/master/) 🔗 and [Final Presentation PowerPoint](https://docs.google.com/presentation/d/1tuga94GZAbLAihIB48S4_Tmrg5g2K61eDz2fssRGSNk/edit#slide=id.p) 🔗.
