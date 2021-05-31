@@ -21,7 +21,7 @@ The next step to this project would've been to add an executable file to it in o
 * WPF standard and custom dialogs
 * Material Design
 
-## Contributors:
+## Contributors
 [Elina Sardaryan](https://www.linkedin.com/in/elina-sardaryan/) 🔗   
 [Raisa Stepanova](https://www.linkedin.com/in/raisa-stepanova-timina-0b711a202/) 🔗   
 [myself, Emma De Barros](https://www.linkedin.com/in/emma-de-barros/) 🔗
